@@ -1,0 +1,310 @@
+<!DOCTYPE html><html lang="uk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Че Гевара — психологія лідерства</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700;900&family=Marck+Script&display=swap" rel="stylesheet">
+<style>
+:root{--r:#e0302f;--g:#f4c430;--o:#8a9a45;--t:#f3efe4;--h:Oswald,Impact,'Arial Narrow',sans-serif;--b:Lora,Georgia,serif;--d:'Playfair Display',Georgia,serif;--hw:'Marck Script','Segoe Script',cursive;--mx:50vw;--my:50vh}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%;overflow:hidden;color:var(--t);font:clamp(13px,1.45vw,20px)/1.55 var(--b)}
+body{background:linear-gradient(125deg,#0a0a0a,#2b0909,#0f1a0e,#0a0a0a);background-size:300% 300%;animation:bg 22s ease infinite}
+@keyframes bg{50%{background-position:100% 50%}}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.07;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(circle 26vmax at var(--mx) var(--my),#f4c43020,transparent 70%)}
+.orbs{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.orbs i{position:absolute;border-radius:50%;filter:blur(60px);opacity:.22;animation:dr 18s ease-in-out infinite alternate}
+@keyframes dr{to{transform:translate(12vw,-10vh) scale(1.4)}}
+.s{position:absolute;inset:0;display:none;padding:5vh 6vw 10vh;align-content:safe center;gap:2vh 3.5vw;isolation:isolate;z-index:1;overflow-y:auto;scrollbar-width:none}
+.s::-webkit-scrollbar{display:none}
+.s::before{content:attr(data-no);position:fixed;right:3vw;top:0;z-index:-1;font:900 24vw/1 var(--d);color:transparent;-webkit-text-stroke:2px #f4c4301a;pointer-events:none}
+.s.on{display:grid;animation:in .9s cubic-bezier(.2,.8,.2,1)}
+.s.on[data-t="1"]{animation-name:inz}.s.on[data-t="2"]{animation-name:inr}.s.on[data-t="3"]{animation-name:inc}
+@keyframes in{from{opacity:0;transform:translateX(9vw) scale(.96);filter:blur(8px)}}
+@keyframes inz{from{opacity:0;transform:scale(1.25);filter:blur(10px)}}
+@keyframes inr{from{opacity:0;transform:perspective(1200px) rotateY(-35deg) translateX(-8vw)}}
+@keyframes inc{from{clip-path:circle(0 at 50% 50%)}to{clip-path:circle(150% at 50% 50%)}}
+.g{grid-template-columns:1.1fr .9fr;align-items:center}.g.rev{grid-template-columns:.9fr 1.1fr}.g.rev>:first-child{order:2}
+h1,h2{font-family:var(--h);text-transform:uppercase;letter-spacing:.05em;line-height:1.1;font-weight:700}
+h1{font-size:clamp(34px,6.4vw,88px);color:var(--g)}
+h2{font-size:clamp(22px,3.3vw,44px);position:relative;padding-bottom:.35em;margin-bottom:1.6vh;background:linear-gradient(90deg,var(--g),#fff8d6,var(--g));background-size:200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shm 6s linear infinite}
+@keyframes shm{to{background-position:-200% 0}}
+h2::after{content:"";position:absolute;left:0;bottom:0;height:4px;width:0;background:linear-gradient(90deg,var(--r),var(--g))}
+.on h2::after{animation:ln 1.2s .4s forwards}@keyframes ln{to{width:min(60%,420px)}}
+li{margin:.5em 0 .5em 1.5em;list-style:none}
+li::before{content:"✦";color:var(--r);display:inline-block;width:1.5em;margin-left:-1.5em}
+b{color:var(--g);font-weight:600}
+.on b{background:linear-gradient(var(--r),var(--r)) no-repeat 0 100%/0 2px;animation:hl 1s 1.3s forwards}@keyframes hl{to{background-size:100% 2px}}
+small,.note{opacity:.65;font-size:.74em}
+.ins{font:1.25em/1.3 var(--hw);color:var(--g);border-left:3px solid var(--r);padding:.2em 0 .2em .8em;margin-top:1.2vh}
+.tag{display:inline-block;font:500 .62em var(--h);letter-spacing:.09em;text-transform:uppercase;background:#e0302f2e;border:1px solid var(--r);border-radius:20px;padding:.12em .9em;margin:.4em .4em 0 0}
+.on .a{animation:up .85s cubic-bezier(.2,.8,.2,1) backwards;animation-delay:calc(var(--i)*.15s + .25s)}
+.on .a.l{animation-name:lf}.on .a.z{animation-name:zm}.on .a.r{animation-name:rt}
+@keyframes up{from{opacity:0;transform:translateY(34px)}}
+@keyframes lf{from{opacity:0;transform:translateX(-70px)}}
+@keyframes rt{from{opacity:0;transform:translateX(70px)}}
+@keyframes zm{from{opacity:0;transform:scale(.55) rotate(-7deg)}}
+.ch{display:inline-block}.on .ch{animation:pop .7s cubic-bezier(.3,1.6,.5,1) backwards;animation-delay:calc(var(--c)*.05s + .3s)}
+@keyframes pop{from{opacity:0;transform:translateY(-70px) rotate(-25deg) scale(.3)}}
+.glow{animation:gl 3s ease-in-out infinite}@keyframes gl{50%{text-shadow:0 0 28px var(--r),0 0 60px #e0302f66}}
+/* фото */
+.ph{position:relative;aspect-ratio:4/5;max-height:66vh;width:100%;max-width:430px;justify-self:center;transition:transform .15s;cursor:zoom-in}
+.ph.land{aspect-ratio:4/3;max-width:560px;max-height:46vh}.ph.mini{aspect-ratio:16/9;max-height:22vh;max-width:380px}
+.ph::before{content:"";position:absolute;inset:-12px -12px 12px 12px;border:3px solid var(--g);border-radius:4px;z-index:-1;transition:.4s}
+.ph:hover::before{inset:-5px -5px 5px 5px;border-color:var(--r)}
+.fr{position:absolute;inset:0;overflow:hidden;border-radius:4px;background:#1b1b1b;box-shadow:0 18px 50px #000a,0 0 40px #e0302f55}
+.ph img,.pn img{width:100%;height:100%;object-fit:cover;filter:grayscale(.7) contrast(1.1) sepia(.25);transition:filter .5s}
+.ph img{animation:kb 16s ease-in-out infinite alternate}
+.ph:hover img,.pn:hover img,.pn.o img{filter:none}
+@keyframes kb{to{transform:scale(1.13) translate(-2%,-2%)}}
+.fr::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,#000c);pointer-events:none}
+.ph figcaption{position:absolute;bottom:0;left:0;right:0;padding:.7em;font-size:.62em;text-align:center;z-index:2}
+.miss img{display:none}.miss .fr{background:radial-gradient(circle,#5c1010,#111)}
+.miss .fr::before{content:"фото не завантажилось";position:absolute;inset:0;display:grid;place-items:center;color:#aaa;font-size:.8em}
+/* галерея */
+.gal{display:flex;gap:.8vw;height:48vh}
+.pn{position:relative;flex:1;overflow:hidden;border-radius:10px;cursor:pointer;transition:flex .8s cubic-bezier(.3,1,.3,1);background:#1b1b1b;border:1px solid #f4c43055}
+.pn:hover,.pn.o{flex:4.5}
+.pn::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 40%,#000d);pointer-events:none}
+.pn .cp{position:absolute;left:0;right:0;bottom:0;padding:.8em 1em;z-index:2;font-size:.78em;opacity:0;transform:translateY(20px);transition:.5s .15s}
+.pn:hover .cp,.pn.o .cp{opacity:1;transform:none}
+.pn .cp em{display:block;font:normal 700 1.5em var(--h);color:var(--g)}
+.pn>span{position:absolute;top:.6em;left:.8em;z-index:2;font:700 1.6em var(--h);color:var(--g);text-shadow:0 0 8px #000}
+/* картки */
+.gr{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.3vw}
+.c{background:#ffffff12;backdrop-filter:blur(6px);border:1px solid #f4c43044;border-radius:12px;padding:.9em 1.1em;transition:.3s}
+.c:hover{transform:translateY(-5px);border-color:var(--r);box-shadow:0 10px 28px #e0302f55}
+.c em{display:block;font:normal 700 1.3em var(--h);color:var(--r);letter-spacing:.04em;text-transform:uppercase}
+.go{cursor:pointer}.go:hover{background:#e0302f33}.go .ic{font-size:1.8em;display:block;transition:.4s}.go:hover .ic{transform:scale(1.3) rotate(-10deg)}
+.fl{perspective:1000px;cursor:pointer;min-height:11.5em}
+.fl>div{position:relative;height:100%;min-height:inherit;transition:transform .8s cubic-bezier(.3,1.3,.5,1);transform-style:preserve-3d}
+.fl.f>div{transform:rotateY(180deg)}
+.fl .fa,.fl .bk{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;padding:.9em 1em;border:1px solid #f4c43055;background:#ffffff14;backdrop-filter:blur(6px);display:flex;flex-direction:column;justify-content:center;overflow:auto}
+.fl .bk{transform:rotateY(180deg);background:linear-gradient(135deg,#5c1010ee,#1b1b1bf2);font-size:.82em;line-height:1.4}
+.fl em{font:normal 700 1.3em var(--h);color:var(--g);text-transform:uppercase}
+.fl .fa i{font-style:normal;color:var(--r);font-size:.7em;margin-top:.5em}
+.neg .fl .fa{border-color:#e0302f99;background:#e0302f1f}
+.neg.on .fl{animation:up .8s backwards,sh 1s ease 1.8s;animation-delay:calc(var(--i)*.15s + .25s),calc(var(--i)*.15s + 1.8s)}
+@keyframes sh{20%,60%{translate:-5px}40%,80%{translate:5px}}
+/* вкладки, степер, піраміда */
+.tbs{display:flex;flex-wrap:wrap;gap:.5em;margin-bottom:1.2vh}
+.btn,.tb{background:#0008;color:var(--g);border:1px solid var(--g);border-radius:30px;padding:.35em 1em;cursor:pointer;font:inherit;font-size:.85em;transition:.3s}
+.btn:hover,.tb:hover,.on2{background:var(--g);color:#111}
+.tp{display:none}.tp.on3{display:block;animation:up .6s}
+.stps{display:flex;align-items:center;margin:1.4vh 0}
+.stp{width:2.6em;height:2.6em;border-radius:50%;border:2px solid var(--g);background:#0008;color:var(--g);font:700 1em var(--h);cursor:pointer;transition:.4s;flex:none}
+.stp.on2{background:var(--r);border-color:var(--r);color:#fff;transform:scale(1.2);box-shadow:0 0 20px var(--r)}
+.stl{flex:1;height:3px;background:#f4c43033;position:relative}.stl i{position:absolute;left:0;top:0;height:100%;width:0;background:var(--g);transition:width .6s}
+.pyr{display:flex;flex-direction:column;align-items:center;gap:.5em}
+.pl{padding:.65em .5em;text-align:center;font:500 1em var(--h);letter-spacing:.05em;text-transform:uppercase;border-radius:8px;background:linear-gradient(90deg,#5c1010,#7a1a1a);border:1px solid #f4c43055;cursor:pointer;width:var(--w);transition:.3s}
+.pl:hover{transform:scale(1.04)}.pl.on2{background:linear-gradient(90deg,var(--g),#ffe58a);color:#111;box-shadow:0 0 24px #f4c43088}
+/* таймлайн */
+.vt{position:relative;padding-left:2em}
+.vt::before{content:"";position:absolute;left:0;top:.3em;bottom:0;width:3px;background:linear-gradient(var(--r),var(--g));transform-origin:top;transform:scaleY(0)}
+.on .vt::before{animation:sy 1.6s .3s forwards}@keyframes sy{to{transform:scaleY(1)}}
+.vi{position:relative;margin-bottom:1.1em}
+.vi::before{content:"";position:absolute;left:-2.55em;top:.35em;width:1.1em;height:1.1em;border-radius:50%;background:var(--g);box-shadow:0 0 0 5px #f4c43044;animation:pu 2s infinite}
+@keyframes pu{50%{box-shadow:0 0 0 12px #f4c43000}}
+.vi em{font:normal 700 1.5em var(--h);color:var(--r)}
+/* цифри, друкарка */
+.n{font:900 clamp(34px,6vw,72px) var(--d);color:var(--r);line-height:1}
+.tw{display:inline-block;width:0;overflow:hidden;white-space:nowrap;border-right:3px solid var(--g);max-width:100%;vertical-align:bottom}
+.on .tw{animation:tw 3s steps(40) .9s forwards}@keyframes tw{to{width:100%}}
+/* орбіта і мотоцикл */
+.orb{position:relative;width:min(30vw,260px);aspect-ratio:1;justify-self:center;margin:2vh auto;animation:spin 24s linear infinite}.orb:hover{animation-play-state:paused}
+@keyframes spin{to{transform:rotate(360deg)}}
+.orb i{position:absolute;left:50%;top:50%;font-style:normal;text-align:center;width:5em;margin:-1.5em -2.5em;transform:rotate(var(--a)) translateY(-min(12vw,112px)) rotate(calc(var(--a)*-1))}
+.orb i span{display:block;animation:spin 24s linear infinite reverse;font-size:.65em}.orb i span::first-line{font-size:2.2em}
+.cen{position:absolute;inset:0;display:grid;place-items:center;font:900 3em var(--d);color:var(--g);animation:spin 24s linear infinite reverse}
+.bike{width:100%;max-width:480px;justify-self:center;border:3px solid var(--g);border-radius:10px;background:linear-gradient(#2b0f0f,#e0902f)}
+.road{animation:rd .5s linear infinite}@keyframes rd{to{transform:translateX(-60px)}}.mnt{animation:rd 9s linear infinite}
+.whl{transform-box:fill-box;transform-origin:center;animation:spin .6s linear infinite}
+.rider{animation:bob .5s ease-in-out infinite alternate}@keyframes bob{to{transform:translateY(-3px)}}
+/* радар, слайдер, тест */
+#rd svg{width:100%;max-height:58vh}#rd text{fill:var(--t);font:12px var(--b)}
+#rd .dt{fill:var(--g);cursor:pointer;transition:r .2s}#rd .dt:hover{r:9;fill:var(--r)}
+#tip{min-height:5.2em}
+input[type=range]{width:100%;accent-color:var(--r);height:2em}
+.qo{display:block;width:100%;text-align:left;margin:.4em 0;background:#ffffff12;color:var(--t);border:1px solid #f4c43055;border-radius:10px;padding:.5em .9em;font:inherit;font-size:.85em;cursor:pointer;transition:.3s}
+.qo:hover{background:#f4c43033}.qo.ok{background:#3c7a2a;border-color:#7fd15f}.qo.no{background:#8a1c1c;border-color:var(--r)}
+/* інтерфейс */
+#pb{position:fixed;top:0;left:0;height:4px;background:linear-gradient(90deg,var(--r),var(--g));transition:width .6s;z-index:30}
+#ui{position:fixed;left:0;right:0;bottom:0;display:flex;align-items:center;gap:.5em;padding:1.2vh 2vw;z-index:30;background:linear-gradient(transparent,#000c)}
+#ui button{background:#0008;color:var(--g);border:1px solid var(--g);border-radius:50%;width:2.3em;height:2.3em;cursor:pointer;font-size:.95em;transition:.3s}#ui button:hover{background:var(--g);color:#111}
+#dots{flex:1;display:flex;justify-content:center;gap:.5em;flex-wrap:wrap}
+#dots i{width:.7em;height:.7em;border-radius:50%;background:#f4c43044;cursor:pointer;transition:.3s}#dots i.on{background:var(--r);transform:scale(1.5)}
+#ct{font-size:.75em;opacity:.8;min-width:4em;text-align:right}
+#menu{position:fixed;inset:0;z-index:40;background:#000e;display:none;padding:8vh 6vw;overflow:auto;backdrop-filter:blur(8px)}
+#menu.on{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1em;align-content:start;animation:in .4s}
+#menu div{border:1px solid #f4c43055;border-radius:10px;padding:1em;cursor:pointer;transition:.3s}#menu div:hover{background:#e0302f55;transform:scale(1.04)}#menu b{font:700 1.6em var(--h);color:var(--r);background:none}
+#lb{position:fixed;inset:0;z-index:50;background:#000e;display:none;place-items:center;cursor:zoom-out;padding:4vh}
+#lb.on{display:grid;animation:in .4s}#lb img{max-width:92vw;max-height:80vh;border:3px solid var(--g);border-radius:6px}#lb p{text-align:center;margin-top:1vh;font-size:.85em}
+.rp{position:fixed;border:2px solid var(--g);border-radius:50%;width:10px;height:10px;transform:translate(-50%,-50%);pointer-events:none;z-index:60;animation:rp .7s forwards}@keyframes rp{to{width:90px;height:90px;opacity:0}}
+@media(max-width:800px){.g,.g.rev{grid-template-columns:1fr}.g.rev>:first-child{order:0}.ph{max-height:30vh;aspect-ratio:16/9}.gal{flex-direction:column;height:60vh}.s{align-content:start;padding-top:6vh}}
+</style></head><body>
+<div class="orbs"><i style="width:40vw;height:40vw;left:-10vw;top:10vh;background:#e0302f"></i><i style="width:30vw;height:30vw;right:-8vw;bottom:0;background:#8a9a45;animation-delay:-6s"></i></div>
+<div id="pb"></div>
+<div id="ui"><button onclick="go(k-1)" title="Назад">‹</button><button onclick="go(k+1)" title="Далі">›</button><button id="pl" onclick="auto()" title="Автопоказ (P)">▶</button><button onclick="menu()" title="Огляд (M)">☰</button><div id="dots"></div><span id="ct"></span><button onclick="fs()" title="Повний екран (F)">⛶</button></div>
+<div id="menu"></div><div id="lb" onclick="this.classList.remove('on')"><div><img alt=""><p></p></div></div>
+
+<!-- 1 -->
+<section class="s g"><div><p class="a"><span class="tag">Психологія лідерства</span></p><h1 class="glow" id="t1">Ернесто Че Гевара</h1><p class="a" style="font:1.3em var(--d)"><span class="tw">Психологічний портрет лідера-революціонера</span></p><p class="a" style="margin-top:2vh"><span class="tag">Ідентичність</span><span class="tag">Мотивація</span><span class="tag">Харизма</span><span class="tag">Тінь лідера</span></p><p class="a" style="margin-top:3vh"><b>Підготувала: Первак Марія</b><br><small>ЛНУ імені Івана Франка · економічний факультет · група ЕКММ-11с</small></p></div>
+<figure class="ph a z tilt"><div class="fr"><img data-f="CheHigh.jpg" alt="Че Гевара"></div><figcaption>Ернесто «Че» Гевара (1928–1967) · фото А. Корди, 1960</figcaption></figure></section>
+
+<!-- 2 -->
+<section class="s"><h2 class="a">План — клікни, щоб перейти</h2><div class="gr">
+<div class="c a go" data-go="3"><span class="ic">🧒</span><em>01 · Формування</em>Дитинство, подорож, вибір шляху</div><div class="c a go" data-go="7"><span class="ic">📸</span><em>02 · Фотохроніка</em>Революція та влада в кадрах</div><div class="c a go" data-go="9"><span class="ic">🧠</span><em>03 · Портрет</em>Риси та Big Five</div><div class="c a go" data-go="11"><span class="ic">🔺</span><em>04 · Мотивація</em>Піраміда Маслоу</div><div class="c a go" data-go="13"><span class="ic">⚠️</span><em>05 · Тінь лідера</em>Когнітивні пастки</div><div class="c a go" data-go="15"><span class="ic">✅</span><em>06 · Висновки</em>Міні-тест</div></div></section>
+
+<!-- 3 -->
+<section class="s g"><div data-tabs><h2 class="a">Дитинство: ґрунт особистості</h2><p class="a">Росаріо (Аргентина), <b>14 червня 1928 р.</b> Обери чинник — і побачиш психологічне пояснення:</p>
+<div class="tbs a"><button class="tb">Хвороба</button><button class="tb">Родина</button><button class="tb">Книги й спорт</button></div>
+<div class="c a"><div class="tp"><em>Компенсація (А. Адлер)</em>Тяжка астма з дитинства. Відчуття слабкості може спонукати до компенсації — прагнення перевершити власні обмеження. Гевара не здавався хворобі й займався спортом.</div>
+<div class="tp"><em>Ідентичність (Е. Еріксон)</em>Вільнодумна атмосфера, дискусії, багата домашня бібліотека. У юності ідентичність формувалася навколо ідей і незалежності, а не кар’єри.</div>
+<div class="tp"><em>Ціннісна система</em>Читав Верна, Неруду, Маркса, Фройда; грав у шахи та регбі. Ідеалізм і дисципліна сформувалися ще до подорожей.</div></div>
+<p class="ins a">Слабкість тіла стала фабрикою волі.</p></div>
+<div class="orb a z"><div class="cen">1928</div><i style="--a:0deg"><span>📚<br>читання</span></i><i style="--a:90deg"><span>♟️<br>шахи</span></i><i style="--a:180deg"><span>🏉<br>регбі</span></i><i style="--a:270deg"><span>⚕️<br>медицина</span></i></div></section>
+
+<!-- 4 -->
+<section class="s g rev"><div><h2 class="a">Мотоциклетна подорож</h2><p class="a"><b>1951–52:</b> мандрівка Південною Америкою з Альберто Гранадо; <b>1953:</b> диплом лікаря. Натисни на кроки — як змінювалося мислення:</p>
+<div class="stps a" id="stps"><button class="stp">1</button><div class="stl"><i></i></div><button class="stp">2</button><div class="stl"><i></i></div><button class="stp">3</button><div class="stl"><i></i></div><button class="stp">4</button></div>
+<div class="c a" id="sp" style="min-height:8.5em"></div><p class="note a">Інтерпретація за теорією когнітивного дисонансу Л. Фестінгера.</p></div>
+<svg class="bike a z" viewBox="0 0 400 260"><g class="mnt"><path d="M0 170 L60 90 L110 150 L170 70 L240 160 L300 100 L360 160 L420 90 L480 170 L540 90 L600 170 L720 170 V200 H0Z" fill="#3a1414" opacity=".8"/></g><circle cx="320" cy="60" r="26" fill="#f4c430"/><rect y="190" width="400" height="70" fill="#1b1b1b"/><g class="road"><path d="M0 228H700" stroke="#f4c430" stroke-width="4" stroke-dasharray="30 30"/></g><g class="rider"><g class="whl"><circle cx="130" cy="205" r="26" fill="none" stroke="#f3efe4" stroke-width="5"/><path d="M130 179V231M104 205H156" stroke="#f3efe4" stroke-width="2"/></g><g class="whl"><circle cx="270" cy="205" r="26" fill="none" stroke="#f3efe4" stroke-width="5"/><path d="M270 179V231M244 205H296" stroke="#f3efe4" stroke-width="2"/></g><path d="M130 205L175 160H235L270 205M175 160L200 205H225L240 160" fill="none" stroke="#e0302f" stroke-width="7" stroke-linejoin="round"/><path d="M235 160L262 148" stroke="#f3efe4" stroke-width="5"/><circle cx="195" cy="108" r="14" fill="#f3efe4"/><path d="M195 122L190 152L230 152L255 150" fill="none" stroke="#8a9a45" stroke-width="12" stroke-linecap="round"/><path d="M177 100L212 100L205 94L180 94Z" fill="#8a9a45"/></g><text x="12" y="22" fill="#fff" font-size="13">La Poderosa · 1951–52</text></svg></section>
+
+<!-- 5 -->
+<section class="s g"><div><h2 class="a">Гватемала, Мексика, «Гранма»</h2><div class="vt">
+<div class="vi a l"><em>1954</em><br>Гватемала: падіння уряду Арбенса за підтримки США → <b>антиімперіалізм</b> і ідея збройної боротьби.<br><span class="tag">Травматична подія → зміна світогляду</span></div>
+<div class="vi a l"><em>1955</em><br>Мехіко: зустріч з Фіделем Кастро — за одну ніч <b>погоджується приєднатися</b>.<br><span class="tag">Ідентифікація з лідером</span></div>
+<div class="vi a l"><em>1956</em><br>«Гранма»: висадка 82 повстанців на Кубі; після розгрому вціліла лише мала група.<br><span class="tag">Стрес і згуртування групи</span></div></div></div>
+<figure class="ph a r tilt"><div class="fr"><img data-f="CheyFidel.jpg" alt="Че і Фідель"></div><figcaption>Че Гевара та Фідель Кастро</figcaption></figure></section>
+
+<!-- 6 -->
+<section class="s g rev"><div><h2 class="a">Кубинська революція</h2><ul>
+<li class="a l">Сьєрра-Маестра: <b>від лікаря до команданте</b> — зміна соціальної ролі та самооцінки</li>
+<li class="a l">Створює школу, друкарню, «Радіо Ребельде» — будує не лише армію, а й спільноту</li>
+<li class="a l"><b>Грудень 1958:</b> вирішальна битва за Санта-Клару</li>
+<li class="a l"><b>1 січня 1959:</b> повалення режиму Батісти</li></ul>
+<span class="tag a">Лідерська ідентичність</span><span class="tag a">Влада знань</span><span class="tag a">Успіх підкріплює віру</span><p class="ins a">Перемога стала доказом, що «неможливе» можливе — і це пізніше підвело.</p></div>
+<figure class="ph a z tilt"><div class="fr"><img data-f="Che_SClara.jpg" alt="Санта-Клара"></div><figcaption>Санта-Клара, грудень 1958 р.</figcaption></figure></section>
+
+<!-- 7 -->
+<section class="s"><h2 class="a">Фотохроніка влади (1959–1964) — наведи курсор</h2>
+<div class="gal a z">
+<div class="pn"><span>01</span><div class="fr"><img data-f="Che_Guevara_June_2,_1959.jpg" alt=""></div><div class="cp"><em>1959 · Команданте</em>У «фірмовому» оливковому однострої: образ, що став символом.</div></div>
+<div class="pn"><span>02</span><div class="fr"><img data-f="Che_Guevara.jpg" alt=""></div><div class="cp"><em>1961 · Міністр промисловості</em>Кабінет у готелі «Рив’єра», інтерв’ю журналу Look.</div></div>
+<div class="pn"><span>03</span><div class="fr"><img data-f="Beauvoir_Sartre_-_Che_Guevara_-1960_-_Cuba.jpg" alt=""></div><div class="cp"><em>1960 · Інтелектуали</em>Зустріч із Сартром і Симоною де Бовуар на Кубі.</div></div>
+<div class="pn"><span>04</span><div class="fr"><img data-f="CheLaCoubreMarch.jpg" alt=""></div><div class="cp"><em>5 березня 1960</em>Марш пам’яті жертв вибуху «Ла Кубр» у Гавані.</div></div></div>
+<div class="gr" style="grid-template-columns:repeat(4,1fr);margin-top:2vh"><div class="c a"><em>1959</em>Президент Національного банку</div><div class="c a"><em>1961</em>Міністр промисловості</div><div class="c a"><em>«Нова людина»</em>Моральні стимули замість матеріальних</div><div class="c a"><em>1964</em>Виступ в ООН</div></div></section>
+
+<!-- 8 -->
+<section class="s g"><div><h2 class="a">Конго і Болівія: коли ідеал зіткнувся з реальністю</h2><div class="gr" style="margin-bottom:1.5vh">
+<div class="a"><div class="n"><span data-n="39">0</span></div>роки життя</div><div class="a"><div class="n"><span data-n="11">0</span></div>місяців у Болівії</div><div class="a"><div class="n">≈<span data-n="50">0</span></div>бійців у загоні</div></div><ul>
+<li class="a l"><b>1965, Конго:</b> провал через розбіжності з місцевими лідерами</li>
+<li class="a l"><b>1966–67, Болівія:</b> ізоляція, відсутність підтримки селян</li>
+<li class="a l"><b>8–9 жовтня 1967:</b> полон і страта в Ла-Ігері</li></ul>
+<span class="tag a">Ілюзія контролю</span><span class="tag a">Надмірна самовпевненість</span><span class="tag a">Ізоляція</span></div>
+<figure class="ph land a r tilt"><div class="fr"><img data-f="Che-airport-14mar65.jpg" alt="Гавана 1965"></div><figcaption>Гавана, березень 1965 р.: повернення з африканського турне</figcaption></figure></section>
+
+<!-- 9 -->
+<section class="s g" id="rs"><div id="rd"><h2 class="a">Психологічний портрет</h2><svg viewBox="-30 0 460 400" class="a z"></svg></div>
+<div><div class="tbs a"><button class="btn on2" id="m1">Риси лідера</button><button class="btn" id="m2">Big Five</button><button class="btn" id="cmp">Орієнтир</button></div>
+<div class="c a" id="tip"><b>Наведи курсор на точку</b> — побачиш пояснення риси.</div>
+<figure class="ph mini a z" style="margin-top:2vh"><div class="fr"><img data-f="CheinMoscow.jpg" alt="Москва 1965"></div><figcaption>Москва, 1965 р.</figcaption></figure>
+<p class="note a" style="margin-top:1vh">Оцінки — авторська якісна інтерпретація за біографічними свідченнями, не результат тестування. «Орієнтир» — умовний профіль для порівняння.</p></div></section>
+
+<!-- 10 -->
+<section class="s g"><div data-tabs><h2 class="a">Стиль лідерства</h2><div class="tbs a"><button class="tb">Харизматичний</button><button class="tb">Трансформаційний</button><button class="tb">Власний приклад</button><button class="tb">Авторитарний</button></div>
+<div class="c a"><div class="tp"><em>Харизматичний (М. Вебер)</em>Влада спирається на віру людей в особливі якості лідера. Берет, борода, образ мученика — сильні символи.<br><b>Працює:</b> у кризі та революції.<br><b>Ризик:</b> залежність від особи.</div>
+<div class="tp"><em>Трансформаційний (Дж. Бернс, Б. Басс)</em>Надихав високими цілями та змінював цінності послідовників: ідея «нової людини».<br><b>Працює:</b> для мобілізації на велику місію.<br><b>Ризик:</b> ідеал відривається від реальності.</div>
+<div class="tp"><em>Лідерство власним прикладом</em>Працював і воював нарівні з іншими, відкидав привілеї.<br><b>Працює:</b> створює довіру та лояльність.<br><b>Ризик:</b> надмірні вимоги до інших.</div>
+<div class="tp"><em>Авторитарний стиль</em>Жорстка дисципліна й покарання у стосунках з підлеглими.<br><b>Працює:</b> у бойових умовах.<br><b>Ризик:</b> придушення ініціативи й критики.</div></div>
+<p class="ins a">Його сила і слабкість — один і той самий стиль.</p></div>
+<figure class="ph land a r tilt"><div class="fr"><img data-f="Raulche2.jpg" alt="Че і Рауль Кастро"></div><figcaption>Рауль Кастро та Че Гевара, 1958 р.</figcaption></figure></section>
+
+<!-- 11 -->
+<section class="s g rev"><div><h2 class="a">Мотивація: «перевернута» піраміда Маслоу</h2><p class="a">Натисни на рівень — побачиш, як потреба проявлялась у Гевари:</p><div class="c a" id="pp" style="margin-top:1vh;min-height:7em"></div><p class="ins a">Вищі цінності для нього важили більше за базові потреби.</p><p class="note a">Інтерпретація, а не діагноз.</p></div>
+<div class="pyr"><div class="pl a on2" data-k="0" style="--w:36%">Самоактуалізація</div><div class="pl a" data-k="1" style="--w:50%">Повага</div><div class="pl a" data-k="2" style="--w:64%">Приналежність</div><div class="pl a" data-k="3" style="--w:78%">Безпека</div><div class="pl a" data-k="4" style="--w:92%">Фізіологічні потреби</div></div></section>
+
+<!-- 12 -->
+<section class="s g"><div><h2 class="a">Чому за ним йшли: психологія впливу</h2><div class="gr" style="grid-template-columns:1fr 1fr">
+<div class="fl a"><div><div class="fa"><em>✔ Приклад</em>Діє, а не лише говорить<i>↻ клікни</i></div><div class="bk"><b>Соціальне научіння (А. Бандура):</b> бійці наслідували лідера, який працював і ризикував нарівні з ними.</div></div></div>
+<div class="fl a"><div><div class="fa"><em>✔ Ми — повстанці</em>Спільна ідентичність<i>↻ клікни</i></div><div class="bk"><b>Теорія соціальної ідентичності (Г. Теджфел):</b> «ми» об’єднувало загін навіть у тяжких умовах.</div></div></div>
+<div class="fl a"><div><div class="fa"><em>✔ Харизма</em>Образ і символи<i>↻ клікни</i></div><div class="bk"><b>М. Вебер:</b> влада тримається на вірі в особисті якості та місію лідера; берет із зіркою й борода посилювали образ.</div></div></div>
+<div class="fl a"><div><div class="fa"><em>✔ Значуща мета</em>Справедливий світ<i>↻ клікни</i></div><div class="bk"><b>Постановка цілей (Е. Лок):</b> чітка і складна мета підвищує мотивацію та витривалість.</div></div></div></div></div>
+<figure class="ph land a r tilt"><div class="fr"><img data-f="Che_Guevara,_Sabri_and_Nasser.jpg" alt="Каїр"></div><figcaption>Каїр: зустріч з Гамалем Абделем Насером</figcaption></figure></section>
+
+<!-- 13 -->
+<section class="s neg"><h2 class="a" style="color:var(--r);-webkit-text-fill-color:var(--r)">Тінь лідера: негативні аспекти й когнітивні пастки</h2><div class="gr">
+<div class="fl a"><div><div class="fa"><em>✖ Жорсткість</em>Смертні вироки<i>↻ клікни</i></div><div class="bk">1959 р., Ла-Кабанья: трибунали виносили смертні вироки; кількість страт оскаржується.<br><b>Механізм:</b> моральне відчуження (А. Бандура) — насильство виправдовується «вищою метою».</div></div></div>
+<div class="fl a"><div><div class="fa"><em>✖ Догматизм</em>Нетерпимість<i>↻ клікни</i></div><div class="bk">1960 р. — табір «перевиховання» працею Гуанаакабібес.<br><b>Механізм:</b> когнітивна ригідність — складно переглядати власні переконання.</div></div></div>
+<div class="fl a"><div><div class="fa"><em>✖ Економіка</em>Помилки міністра<i>↻ клікни</i></div><div class="bk">Форсована індустріалізація й ставка на моральні стимули супроводжувалися падінням виробництва.<br><b>Механізм:</b> упередження підтвердження — ігнорування даних, що суперечать теорії.</div></div></div>
+<div class="fl a"><div><div class="fa"><em>✖ Конго та Болівія</em>Нереалістичність<i>↻ клікни</i></div><div class="bk">Слабка розвідка, відсутність підтримки населення, ізольований загін.<br><b>Механізм:</b> надмірна самовпевненість та ілюзія контролю.</div></div></div>
+<div class="fl a"><div><div class="fa"><em>✖ «Фокізм»</em>Романтика насильства<i>↻ клікни</i></div><div class="bk">Віра, що невеликий загін сам запалить революцію.<br><b>Механізм:</b> екстраполяція одного успішного досвіду (Куба) на всі ситуації.</div></div></div>
+<div class="fl a"><div><div class="fa"><em>✖ Критика</em>Мало простору для сумнівів<i>↻ клікни</i></div><div class="bk">Командний стиль залишав мало місця для альтернативних думок.<br><b>Механізм:</b> групове мислення (І. Дженіс) і залежність від лідера.</div></div></div></div>
+<p class="note a">Механізми — психологічна інтерпретація, а не доведені діагнози.</p></section>
+
+<!-- 14 -->
+<section class="s g rev"><div><h2 class="a">Спадщина: герой чи антигерой?</h2>
+<p class="a">Чому образ живе досі? <span class="tag">Ефект ореолу</span><span class="tag">Мучеництво</span><span class="tag">Комерціалізація</span></p>
+<div class="c a" id="sv" style="margin:1.5vh 0"></div>
+<div class="a"><div style="display:flex;justify-content:space-between"><b>Герой</b><b style="color:var(--r)">Антигерой</b></div><input type="range" id="sl" min="0" max="100" value="50"></div>
+<p class="ins a">Один портрет — багато правд.</p></div>
+<figure class="ph land a z tilt"><div class="fr"><img data-f="Heroico1.jpg" alt="Guerrillero Heroico"></div><figcaption>«Guerrillero Heroico», А. Корда, 1960</figcaption></figure></section>
+
+<!-- 15 -->
+<section class="s g"><div><h2 class="a">Висновки</h2><div class="c a"><b>Чого навчитися (+)</b><ul><li>Лідерство власним прикладом</li><li>Сила ідеї та цінностей</li><li>Самодисципліна й стійкість</li></ul></div>
+<div class="c a" style="border-color:var(--r);margin-top:1.2vh"><b style="color:var(--r)">Чого уникати (−)</b><ul><li>Догматизму та нетерпимості</li><li>Ігнорування реальності й фактів</li><li>Відсутності зворотного зв’язку</li></ul></div>
+<p class="note a" style="margin-top:1.5vh">Джерела: Jon Lee Anderson, <i>Che Guevara: A Revolutionary Life</i> (1997); Е. Че Гевара, «Мотоциклетні щоденники»; J. M. Burns, <i>Leadership</i> (1978). Фото: Wikimedia Commons.</p></div>
+<div class="c a z" id="qz"></div></section>
+
+<script>
+const S=[...document.querySelectorAll('.s')],$=id=>document.getElementById(id),Q=(s,r=document)=>[...r.querySelectorAll(s)];let k=0,tm=null;
+S.forEach((s,i)=>{s.dataset.no=String(i+1).padStart(2,'0');s.dataset.t=i%4;Q('.a,.fl',s).forEach((e,j)=>e.style.setProperty('--i',j))});
+['t1'].forEach(id=>{const e=$(id);e.innerHTML=[...e.textContent].map((c,i)=>`<span class="ch" style="--c:${i}">${c==' '?'\u00a0':c}</span>`).join('')});
+/* фото з кількома джерелами */
+const H=['commons.wikimedia.org','en.wikipedia.org','pt.wikipedia.org'],U=(h,f,w)=>`https://${h}/wiki/Special:FilePath/${encodeURIComponent(f)}?width=${w}`;
+Q('img[data-f]').forEach(im=>{let i=0;const t=()=>{if(i>=H.length){im.onerror=null;(im.closest('.ph,.pn')||im).classList.add('miss');return}im.src=U(H[i++],im.dataset.f,900)};im.onerror=t;t()});
+$('dots').innerHTML=S.map((_,i)=>`<i onclick="go(${i})"></i>`).join('');
+$('menu').innerHTML=S.map((s,i)=>`<div onclick="go(${i});menu()"><b>${i+1}</b><br>${s.querySelector('h1,h2').textContent.replace(/\s+/g,' ')}</div>`).join('');
+addEventListener('mousemove',e=>{document.body.style.setProperty('--mx',e.clientX+'px');document.body.style.setProperty('--my',e.clientY+'px')});
+Q('.tilt').forEach(e=>{e.onmousemove=ev=>{const r=e.getBoundingClientRect(),x=(ev.clientX-r.left)/r.width-.5,y=(ev.clientY-r.top)/r.height-.5;e.style.transform=`perspective(800px) rotateY(${x*16}deg) rotateX(${-y*16}deg)`};e.onmouseleave=()=>e.style.transform=''});
+Q('.fl').forEach(e=>e.onclick=()=>e.classList.toggle('f'));
+Q('[data-go]').forEach(e=>e.onclick=()=>go(+e.dataset.go-1));
+/* лайтбокс і галерея */
+addEventListener('click',e=>{const p=e.target.closest('.ph,.pn');if(p&&!p.classList.contains('miss')){if(p.classList.contains('pn')&&!p.classList.contains('o')){Q('.pn').forEach(x=>x.classList.remove('o'));p.classList.add('o');return}
+const im=p.querySelector('img');$('lb').querySelector('img').src=im.src.replace(/width=\d+/,'width=1600');$('lb').querySelector('p').textContent=(p.querySelector('figcaption,.cp')||{}).textContent||'';$('lb').classList.add('on');return}
+if(e.target.closest('button,input,.fl,.go,#menu,#rd,.pl,.qo'))return;const r=document.createElement('i');r.className='rp';r.style.left=e.clientX+'px';r.style.top=e.clientY+'px';document.body.append(r);setTimeout(()=>r.remove(),700)});
+/* вкладки */
+Q('[data-tabs]').forEach(w=>{const bs=Q('.tb',w),ps=Q('.tp',w);bs.forEach((b,i)=>b.onclick=()=>{bs.forEach(x=>x.classList.toggle('on2',x==b));ps.forEach((p,j)=>p.classList.toggle('on3',j==i))});bs[0].click()});
+/* степер */
+const SP=[['Спостереження','Бачить бідність і хвороби в Латинській Америці, зокрема в лепрозорії Сан-Пабло (Перу).'],['Емпатія','Співпереживання перетворює абстрактну нерівність на особисту проблему.'],['Когнітивний дисонанс','Кар’єра лікаря суперечить новому розумінню справедливості — виникає внутрішній конфлікт.'],['Рішення','Дисонанс знімається зміною життєвого шляху: від лікаря до революціонера.']];
+const sb=Q('.stp'),sl_=Q('.stl i');sb.forEach((b,i)=>b.onclick=()=>{sb.forEach((x,j)=>x.classList.toggle('on2',j==i));sl_.forEach((x,j)=>x.style.width=j<i?'100%':'0');$('sp').innerHTML=`<div class="tp on3"><em>${SP[i][0]}</em>${SP[i][1]}</div>`});sb[0].click();
+/* піраміда */
+const LV=[['Самоактуалізація','Служіння ідеї: революція як життєва місія та «нова людина».'],['Повага','Статус команданте й визнання соратників, але відмова від матеріальних привілеїв.'],['Приналежність','Братство партизанського загону, лояльність до Фіделя й товаришів.'],['Безпека','Свідомо ігнорував безпеку: ризик, життя в горах, відмова від посад.'],['Фізіологічні потреби','Голод, холод, астма в джунглях — потреби відсувалися на другий план.']];
+const pl=Q('.pl');pl.forEach(p=>p.onclick=()=>{pl.forEach(x=>x.classList.toggle('on2',x==p));const l=LV[+p.dataset.k];$('pp').innerHTML=`<div class="tp on3"><em>${l[0]}</em>${l[1]}</div>`});pl[0].click();
+/* радар */
+const D1=[['Ідеалізм',95,'Віра у справедливість була рушієм майже всіх його рішень.'],['Самодисципліна',95,'Витривалість і суворість до себе: від боротьби з астмою до походів у джунглях.'],['Готовність до ризику',98,'Особисто брав участь у боях; погоджувався на дуже небезпечні операції.'],['Харизма',90,'Здатність надихати людей особистим прикладом і переконаністю.'],['Гнучкість',40,'Складно відступав від принципів — це шкодило в економіці та в Болівії.'],['Терпимість до критики',30,'Нетерпимість до інакомислення й «слабкості» в команді.']];
+const D2=[['Відкритість до досвіду',92,'Інтелектуальна допитливість, читання, подорожі, готовність до нового.'],['Сумлінність',90,'Висока самодисципліна й наполегливість; але схильність до жорсткого контролю.'],['Екстраверсія',72,'Харизматичний у публічній ролі, активний серед однодумців.'],['Доброзичливість',45,'Теплий до соратників, але безкомпромісний до опонентів.'],['Емоційна стабільність',65,'Спокій у небезпеці й стійкість до стресу.']];
+let T=D1;const rs=document.querySelector('#rd svg'),NS='http://www.w3.org/2000/svg';
+const P=(i,v)=>{const a=-Math.PI/2+i*2*Math.PI/T.length;return[200+v*1.4*Math.cos(a),200+v*1.4*Math.sin(a)]};
+function build(){let h='';[25,50,75,100].forEach(v=>h+=`<polygon points="${T.map((_,i)=>P(i,v)).join(' ')}" fill="none" stroke="#f4c43033"/>`);
+T.forEach((t,i)=>{const[x,y]=P(i,100),[lx,ly]=P(i,124);h+=`<line x1="200" y1="200" x2="${x}" y2="${y}" stroke="#f4c43033"/><text x="${lx}" y="${ly}" text-anchor="${lx<190?'end':lx>210?'start':'middle'}">${t[0]}</text>`});
+h+=`<polygon id="ideal" points="${T.map((_,i)=>P(i,75)).join(' ')}" fill="#8a9a4533" stroke="#8a9a45" stroke-dasharray="6" opacity="${$('cmp').classList.contains('on2')?1:0}"/><polygon id="poly" fill="#e0302f66" stroke="#e0302f" stroke-width="3"/><g id="dts"></g>`;rs.innerHTML=h;
+let t=0;(function f(){t=Math.min(1,t+.03);const e=1-Math.pow(1-t,3);$('poly').setAttribute('points',T.map((x,i)=>P(i,x[1]*e)).join(' '));if(t<1)requestAnimationFrame(f);else T.forEach((x,i)=>{const[cx,cy]=P(i,x[1]),c=document.createElementNS(NS,'circle');c.setAttribute('cx',cx);c.setAttribute('cy',cy);c.setAttribute('r',6);c.setAttribute('class','dt');c.onmouseenter=c.onclick=()=>$('tip').innerHTML=`<b>${x[0]}: ${x[1]}/100</b><br>${x[2]}`;$('dts').append(c)})})()}
+$('m1').onclick=()=>{T=D1;$('m1').classList.add('on2');$('m2').classList.remove('on2');build()};$('m2').onclick=()=>{T=D2;$('m2').classList.add('on2');$('m1').classList.remove('on2');build()};
+$('cmp').onclick=function(){this.classList.toggle('on2');$('ideal').style.opacity=this.classList.contains('on2')?1:0};
+/* слайдер */
+const V=[[30,'Герой','Відмовився від комфорту, віддав життя за ідею й став символом боротьби з несправедливістю.','#f4c430'],[70,'Складна фігура','Щирий ідеаліст, чиї методи — жорсткість і примус — суперечили проголошеним цінностям.','#c9852a'],[101,'Антигерой','Відповідальний за страти й табори; його стратегії зазнали краху, а романтизація насильства шкодить.','#e0302f']];
+$('sl').oninput=function(){const v=V.find(x=>this.value<x[0]);$('sv').innerHTML=`<em>${v[1]}</em>${v[2]}`;$('sv').style.borderColor=v[3]};$('sl').oninput();
+/* тест */
+const QZ=[['Яка теорія пояснює перетворення слабкості (астми) на силу волі?',['Компенсація (А. Адлер)','Умовний рефлекс (І. Павлов)','Групове мислення (І. Дженіс)'],0],['Як найточніше описати його вплив на бійців на початку революції?',['Бюрократичне керівництво','Невтручання (laissez-faire)','Харизматичне й трансформаційне лідерство'],2],['Який механізм виправдовує жорсткі рішення «вищою метою»?',['Ефект плацебо','Моральне відчуження (А. Бандура)','Ефект Зейгарнік'],1]];
+let qi=0,sc=0;function quiz(){const q=QZ[qi];if(!q){$('qz').innerHTML=`<em>Результат: ${sc} / ${QZ.length}</em>${sc==QZ.length?'Відмінно — ви розумієте психологію лідера!':'Гарний результат. Перегляньте слайди 3, 11 і 13.'}<br><br><button class="btn" onclick="qi=0;sc=0;quiz()">Спробувати ще</button>`;return}
+$('qz').innerHTML=`<em>Міні-тест ${qi+1}/${QZ.length}</em><p style="margin:.4em 0">${q[0]}</p>`+q[1].map((o,i)=>`<button class="qo" data-i="${i}">${o}</button>`).join('');
+Q('.qo',$('qz')).forEach(b=>b.onclick=()=>{const ok=+b.dataset.i==q[2];if(ok)sc++;Q('.qo',$('qz')).forEach(x=>{x.disabled=true;if(+x.dataset.i==q[2])x.classList.add('ok')});if(!ok)b.classList.add('no');setTimeout(()=>{qi++;quiz()},1400)})}quiz();
+/* навігація */
+function go(n){k=Math.max(0,Math.min(S.length-1,n));S.forEach((s,i)=>s.classList.toggle('on',i==k));Q('#dots i').forEach((d,i)=>d.classList.toggle('on',i==k));Q('.fl.f').forEach(e=>e.classList.remove('f'));
+$('pb').style.width=(k+1)/S.length*100+'%';$('ct').textContent=(k+1)+' / '+S.length;
+Q('[data-n]',S[k]).forEach(e=>{const n=+e.dataset.n;let t=0;const id=setInterval(()=>{t+=n/45;e.textContent=Math.round(Math.min(t,n));t>=n&&clearInterval(id)},35)});
+if(S[k].id=='rs')build();history.replaceState(0,'','#'+(k+1))}
+function menu(){$('menu').classList.toggle('on')}
+function fs(){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()}
+function auto(){if(tm){clearInterval(tm);tm=null;$('pl').textContent='▶'}else{$('pl').textContent='❚❚';tm=setInterval(()=>k<S.length-1?go(k+1):auto(),14000)}}
+addEventListener('keydown',e=>{const t=e.target.tagName;if(t=='INPUT'||(t=='BUTTON'&&e.key==' '))return;if(['ArrowRight',' ','PageDown'].includes(e.key)){e.preventDefault();go(k+1)}if(['ArrowLeft','PageUp'].includes(e.key))go(k-1);if(e.key=='Home')go(0);if(e.key=='End')go(S.length-1);if(e.key=='m'||e.key=='M'||(e.key=='Escape'&&$('menu').classList.contains('on')))menu();if(e.key=='Escape')$('lb').classList.remove('on');if(e.key=='f'||e.key=='F')fs();if(e.key=='p'||e.key=='P')auto()});
+let x0;addEventListener('touchstart',e=>x0=e.touches[0].clientX);addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>60)go(k+(d<0?1:-1))});
+go((+location.hash.slice(1)||1)-1);
+</script></body></html>
